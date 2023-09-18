@@ -33,6 +33,7 @@ public class RedisConfig {
         redisTemplate.setEnableTransactionSupport(true);
         redisTemplate.afterPropertiesSet();
         return redisTemplate;
+
     }
 
 }
