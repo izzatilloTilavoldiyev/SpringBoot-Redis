@@ -32,4 +32,22 @@ public class UserController {
         List<User> allUser = userService.getAllUser();
         return ResponseEntity.ok(allUser);
     }
+
+    @GetMapping("{userID}")
+    public ResponseEntity<User> getUserById(
+            @PathVariable Long userID
+    ) {
+        User user = userService.getUserById(userID);
+        return ResponseEntity.ok(user);
+    }
+
+    @DeleteMapping("{userID}")
+    public ResponseEntity<String> deleteUser(
+            @PathVariable Long userID
+    ) {
+        boolean result = userService.deleteUser(userID);
+        if (result)
+            return ResponseEntity.status(HttpStatus.CREATED).body("User deleted successfully!");
+        else return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
 }

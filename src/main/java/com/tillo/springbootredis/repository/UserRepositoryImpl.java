@@ -28,8 +28,23 @@ public class UserRepositoryImpl implements UserRepository{
 
     @Override
     public List<User> getAllUser() {
-        List users = redisTemplate.opsForHash().values(KEY);
-        return users;
+        return redisTemplate.opsForHash().values(KEY);
+    }
+
+    @Override
+    public User getUserById(Long userID) {
+        return (User) redisTemplate.opsForHash().get(KEY, userID);
+    }
+
+    @Override
+    public boolean deleteUser(Long userID) {
+        try {
+            redisTemplate.opsForHash().delete(KEY, userID.toString());
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
 }

@@ -24,5 +24,15 @@ public class UserServiceImpl implements UserService{
         return userRepository.getAllUser();
     }
 
+    @Override
+    public User getUserById(Long userID) {
+        return userRepository.getUserById(userID);
+    }
+
+    @Override
+    public boolean deleteUser(Long userID) {
+        return userRepository.deleteUser(userID);
+    }
+
     // Class methods go here
 }

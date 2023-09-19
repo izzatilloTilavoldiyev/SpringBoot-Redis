@@ -9,4 +9,8 @@ public interface UserRepository {
     boolean saveUser(User user);
 
     List<User> getAllUser();
+
+    User getUserById(Long userID);
+
+    boolean deleteUser(Long userID);
 }
