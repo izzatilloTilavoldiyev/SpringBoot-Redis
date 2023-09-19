@@ -1,4 +1,4 @@
-package com.tillo.springbootredis.entity;
+package com.tillo.springbootredis.redisJPA.entity;
 
 
 import lombok.*;

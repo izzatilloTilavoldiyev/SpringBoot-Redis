@@ -1,7 +1,7 @@
-package com.tillo.springbootredis.repository;
+package com.tillo.springbootredis.redis.repository;
 
 
-import com.tillo.springbootredis.entity.User;
+import com.tillo.springbootredis.redis.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;

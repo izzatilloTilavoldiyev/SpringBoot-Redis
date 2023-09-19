@@ -1,8 +1,8 @@
-package com.tillo.springbootredis.service.user;
+package com.tillo.springbootredis.redis.service.user;
 
 
-import com.tillo.springbootredis.entity.User;
-import com.tillo.springbootredis.repository.UserRepository;
+import com.tillo.springbootredis.redis.entity.User;
+import com.tillo.springbootredis.redis.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

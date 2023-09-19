@@ -1,8 +1,7 @@
-package com.tillo.springbootredis.controller;
+package com.tillo.springbootredis.redisJPA.controller;
 
-
-import com.tillo.springbootredis.entity.User;
-import com.tillo.springbootredis.service.user.UserService;
+import com.tillo.springbootredis.redisJPA.entity.User;
+import com.tillo.springbootredis.redisJPA.service.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/user")
+@RequestMapping("/api/v1/user/jpa")
 public class UserController {
 
     private final UserService userService;

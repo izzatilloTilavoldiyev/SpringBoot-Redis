@@ -1,6 +1,6 @@
-package com.tillo.springbootredis.service.user;
+package com.tillo.springbootredis.redis.service.user;
 
-import com.tillo.springbootredis.entity.User;
+import com.tillo.springbootredis.redis.entity.User;
 
 import java.util.List;
 

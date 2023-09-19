@@ -1,7 +1,6 @@
-package com.tillo.springbootredis.repository;
+package com.tillo.springbootredis.redis.repository;
 
-import com.tillo.springbootredis.entity.User;
-import org.springframework.stereotype.Repository;
+import com.tillo.springbootredis.redis.entity.User;
 
 import java.util.List;
 
