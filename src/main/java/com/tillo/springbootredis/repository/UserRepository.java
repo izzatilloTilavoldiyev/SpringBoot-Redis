@@ -1,9 +1,12 @@
 package com.tillo.springbootredis.repository;
 
+import com.tillo.springbootredis.entity.User;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface UserRepository {
+import java.util.List;
 
-    // Class methods go here
+public interface UserRepository {
+    boolean saveUser(User user);
+
+    List<User> getAllUser();
 }

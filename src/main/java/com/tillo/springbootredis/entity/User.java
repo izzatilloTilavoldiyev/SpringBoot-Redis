@@ -3,12 +3,15 @@ package com.tillo.springbootredis.entity;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class User {
+public class User implements Serializable
+{
     private Long id;
     private String firstName;
     private String lastName;
