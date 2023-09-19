@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -34,7 +35,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserById(Long userID) {
-        return userRepository.findById(userID).get();
+        Optional<User> user = userRepository.findById(userID);
+        return user.orElse(null);
     }
 
     @Override
